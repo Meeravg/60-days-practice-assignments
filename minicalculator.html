@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+        #Container>input{
+            margin-left: 20px;
+        }
+
+        #Container>button {
+            margin: 20px 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="Container"></div>
+    
+</body>
+
+</html>
+
+<script>
+
+    let container = document.getElementById("Container")
+    let inp1 = document.createElement("input")
+    inp1.placeholder = "Enter 1st number"
+
+    let inp2 = document.createElement("input")
+    inp2.placeholder = "Enter 2nd number"
+
+    let br = document.createElement("br")
+
+    let add = document.createElement("button")
+    add.innerText = "Add"
+
+    let sub = document.createElement("button")
+    sub.innerText = "Subtract"
+
+    let mul = document.createElement("button")
+    mul.innerText = "Multiply"
+
+    let divi = document.createElement("button")
+    divi.innerText = "Devide"
+
+    container.append(inp1, inp2, br, add, sub, mul, divi)
+
+    function Add() {
+        alert(Number(inp1.value) + Number(inp2.value));
+    }
+    add.addEventListener("click", Add);
+
+    function Sub() {
+        alert(Number(inp1.value) - Number(inp2.value));
+    }
+    sub.addEventListener("click", Sub);
+
+
+    function Mul() {
+        alert(Number(inp1.value) * Number(inp2.value));
+    }
+    mul.addEventListener("click", Mul);
+
+    function Div() {
+        alert(Number(inp1.value) % Number(inp2.value));
+    }
+    divi.addEventListener("click", Div);
+
+    
+
+    
+</script>
